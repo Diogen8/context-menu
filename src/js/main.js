@@ -31,6 +31,7 @@ var ContextMenu = function(options_list) {
         let childClass = "context-menu__item";
         let childTitleClass = "context-menu__item-title";
         let hasSublevelClass = "context-menu__items--hasSublevel";
+        let disabledClass = "context-menu__item--disabled";
 
         container.classList.add(containerClass);
         if (current_level > 0) container.classList.add("context-menu__sublevel");
@@ -41,6 +42,7 @@ var ContextMenu = function(options_list) {
             title.classList.add(childTitleClass);
             title.innerHTML = item.title;
             item_container.appendChild(title);
+            if (item.disabled) item_container.classList.add(disabledClass);
             let submenu;
             if (item.submenu.length) {
                 item_container.classList.add(hasSublevelClass);
@@ -315,7 +317,7 @@ var options = {
         {
             "clickHandler": defClickHandler,
             "title": "menu item 1",
-            "disabled": false,
+            "disabled": true,
             "submenu": false
         },
 
@@ -355,6 +357,60 @@ var options = {
         {
             "clickHandler": defClickHandler,
             "title": "menu item 1",
+            "disabled": true,
+            "submenu": false
+        },
+
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": true,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": false
+                }
+        ]
+        },
+
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 1",
+            "disabled": false,
+            "submenu": false
+        },
+
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 1",
+            "disabled": false,
+            "submenu": false
+        },
+
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 1",
+            "disabled": true,
+            "submenu": false
+        },
+
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 1",
+            "disabled": false,
+            "submenu": false
+        },
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 1",
             "disabled": false,
             "submenu": false
         },
@@ -388,62 +444,8 @@ var options = {
 
         {
             "clickHandler": defClickHandler,
-            "title": "menu item 1",
-            "disabled": false,
-            "submenu": false
-        },
-
-        {
-            "clickHandler": defClickHandler,
-            "title": "menu item 1",
-            "disabled": false,
-            "submenu": false
-        },
-
-        {
-            "clickHandler": defClickHandler,
-            "title": "menu item 1",
-            "disabled": false,
-            "submenu": false
-        },
-        {
-            "clickHandler": defClickHandler,
-            "title": "menu item 1",
-            "disabled": false,
-            "submenu": false
-        },
-
-        {
-            "clickHandler": defClickHandler,
             "title": "menu item 2",
-            "disabled": false,
-            "submenu": [
-                {
-                    "clickHandler": defClickHandler,
-                    "title": "menu level_2 item 1",
-                    "disabled": false,
-                    "submenu": false
-                },
-                {
-                    "clickHandler": defClickHandler,
-                    "title": "menu item 2",
-                    "disabled": false,
-                    "submenu": false
-                }
-        ]
-        },
-
-        {
-            "clickHandler": defClickHandler,
-            "title": "menu item 1",
-            "disabled": false,
-            "submenu": false
-        },
-
-        {
-            "clickHandler": defClickHandler,
-            "title": "menu item 2",
-            "disabled": false,
+            "disabled": true,
             "submenu": [
                 {
                     "clickHandler": defClickHandler,
