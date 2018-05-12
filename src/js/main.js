@@ -6,21 +6,17 @@ var ContextMenu = function(options_list) {
     let menu = document.createElement("nav");
     menu.classList.add("context-menu");
     
+    //class names for shorter usage
     this.target.append(menu);
     let activeClass = "context-menu--active";
     let overflowClass = "context-menu--overflow";
-    
-    let oneItemClass = "context-menu__item";
-    let submenuClass = "context-menu__sublevel";
-    
     let containerClass = "context-menu__items";
-    let childClass = "context-menu__item";
-    
+    let oneItemClass = "context-menu__item";
     let childTitleClass = "context-menu__item-title";
+    let submenuClass = "context-menu__sublevel";
     let hasSublevelClass = "context-menu__items--hasSublevel";
-    let disabledClass = "context-menu__item--disabled";
     let menuItemHiddenClass = "context-menu__item--hidden";
-    
+    let disabledClass = "context-menu__item--disabled";
     let scrollClass = "context-menu__scroll";
     let scrollTopClass = "context-menu__scroll-top";
     let scrollBottomClass = "context-menu__scroll-bottom";
@@ -39,7 +35,7 @@ var ContextMenu = function(options_list) {
         if (current_level > 0) container.classList.add("context-menu__sublevel");
         menuItems.forEach((item,i,arr) => {
             let item_container = document.createElement('li');
-            item_container.classList.add(childClass);
+            item_container.classList.add(oneItemClass);
             let title = document.createElement('span');
             title.classList.add(childTitleClass);
             title.innerHTML = item.title;
@@ -156,14 +152,11 @@ var ContextMenu = function(options_list) {
             if ((pos.y + height) > clientHeight) {
                 if ((pos.y - height) < 0) {
                     destY = Math.floor((clientHeight - height)/2);
-                    console.log("here");
                 } else {
                     destY = pos.y - height;
                 }
             } else {
                 destY = pos.y;
-                console.log("here", destY);
-                console.log("parentTopPos", parentTopPos);
                 if (destY < 0) {
                     destY = 0;
                 }
