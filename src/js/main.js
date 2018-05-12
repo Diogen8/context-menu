@@ -233,7 +233,7 @@ var ContextMenu = function(options_list) {
         if (!target.classList.contains("context-menu__items"))  target = target.querySelector(".context-menu__items");
         let scrollTop = document.createElement("span");
         let scrollBottom = document.createElement("span");
-        scrollTop.classList.add("context-menu__scroll-top","context-menu__scroll");
+        scrollTop.classList.add("context-menu__scroll-top","context-menu__scroll","context-menu__scroll--hidden");
         scrollBottom.classList.add("context-menu__scroll-bottom","context-menu__scroll");
         target.insertBefore(scrollTop,target.firstChild);
         target.append(scrollBottom);
@@ -281,6 +281,17 @@ var ContextMenu = function(options_list) {
         
         if (newScrollPos < 0) newScrollPos = 0;
         if (newScrollPos > (totalItemsCount - visibleItemsCount)) newScrollPos = totalItemsCount - visibleItemsCount;
+        
+        if (newScrollPos == 0) {
+            target.querySelector(".context-menu__scroll-top").classList.add("context-menu__scroll--hidden");
+        } else {
+             target.querySelector(".context-menu__scroll-top").classList.remove("context-menu__scroll--hidden");
+        }
+        if (newScrollPos == (totalItemsCount - visibleItemsCount)) {
+             target.querySelector(".context-menu__scroll-bottom").classList.add("context-menu__scroll--hidden");
+        } else {
+            target.querySelector(".context-menu__scroll-bottom").classList.remove("context-menu__scroll--hidden");
+        }
         
         target.setAttribute("data-scrollPos",newScrollPos);
         

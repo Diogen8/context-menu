@@ -13,22 +13,60 @@ body {
 
 .context-menu__scroll {
     display: block;
-    height: 10px;
-    background-color: red;
+    height: 12px;
     position: absolute;
     width: 100%;
     z-index: 11;
+    left: 0px;
+    font-size: 0px;
+    line-height: 0px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    
     
     &:hover {
         background-color: chocolate;
         cursor: pointer;
     }
+    
+    
 }
 .context-menu__scroll-top {
     top: 0px;
+    background: linear-gradient(to top, #dfdfdf 0%, gray 100%);
+    border-bottom: none;
+    
+    &::after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 5px;
+        height: 5px;
+        border: 5px solid transparent;
+        border-bottom: 5px solid black;
+        bottom: 2px;
+        left: 44%;
+        box-sizing: border-box;
+    }
+    
 }
 .context-menu__scroll-bottom {
     bottom: 0px;
+     background: linear-gradient(to bottom, #dfdfdf 0%, gray 100%);
+    border-top: none;
+    
+    &::after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 5px;
+        height: 5px;
+        border: 5px solid transparent;
+        border-top: 5px solid black;
+        top: 2px;
+        left: 44%;
+        box-sizing: border-box;
+    }
 }
 .context-menu__items {
      list-style: none;
@@ -39,6 +77,8 @@ body {
     width: 120px;
     margin: 0px;
     z-index: 12;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 .context-menu__item {
@@ -71,6 +111,9 @@ body {
     text-overflow: ellipsis;
     padding-right: 18px;
     
+}
+.context-menu__scroll--hidden {
+    display: none;
 }
 .context-menu__items--hasSublevel>.context-menu__item-title{
     &::after {
