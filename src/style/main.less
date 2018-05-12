@@ -1,0 +1,132 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+
+}
+
+.context-menu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+.context-menu__scroll {
+    display: block;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+    
+    &:hover {
+        background-color: chocolate;
+        cursor: pointer;
+    }
+}
+.context-menu__scroll-top {
+    top: 0px;
+}
+.context-menu__scroll-bottom {
+    bottom: 0px;
+}
+.context-menu__items {
+     list-style: none;
+    background-color: white;
+    display: block;
+    padding: 0px;
+    border: 1px solid black;
+    width: 120px;
+    margin: 0px;
+    z-index: 12;
+}
+
+.context-menu__item {
+    border-bottom: 1px solid #dfdfdf;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    
+    &:nth-last-of-type {
+        border-bottom: none;
+    }
+    
+    &:hover {
+        background-color: darkgrey;
+    }
+}
+.context-menu__item--hidden {
+    display: none;
+}
+.context-menu__item-title {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 18px;
+    
+}
+.context-menu__items--hasSublevel>.context-menu__item-title{
+    &::after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: 10px solid transparent;
+        border-left: 10px solid black;
+        box-sizing: border-box;
+        position: absolute;
+        right: -8px;
+        top: 10px;
+    }
+}
+
+.context-menu__sublevel {
+    position: absolute;
+    right: -120px;
+    top: 5px;
+    display: none;
+}
+
+.context-menu__link {
+    text-decoration: none;
+    color: black;
+}
+
+.context-menu--active {
+  display: block;
+}
+
+.context-menu__items--hasSublevel {
+    &:hover>.context-menu__sublevel {
+        display: block;
+    }
+}
+/* tasks */
+ 
+.targets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+    display: flex;
+    height: 91vh;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+.targets__item {
+  display: flex;
+  width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+ 
