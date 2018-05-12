@@ -63,9 +63,9 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
-  //      .pipe(babel({
-  //          presets: ['env']
-   //     }))
+        .pipe(babel({
+           presets: ['env']
+        }))
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
         .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
