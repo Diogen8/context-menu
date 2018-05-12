@@ -227,16 +227,16 @@ var ContextMenu = function(options_list) {
         
         
         if (newScrollPos == 0) {
-            target.querySelector("."+scrollTopClass).classList.add(scrollHiddenClass);
+            target.firstChild.classList.add(scrollHiddenClass);
         }
         else {
-             target.querySelector("."+scrollTopClass).classList.remove(scrollHiddenClass);
+             target.firstChild.classList.remove(scrollHiddenClass);
         }
         if (newScrollPos == (totalItemsCount - visibleItemsCount)) {
-             target.querySelector("."+scrollBottomClass).classList.add(scrollHiddenClass);
+             target.lastChild.classList.add(scrollHiddenClass);
         }
         else {
-            target.querySelector("."+scrollBottomClass).classList.remove(scrollHiddenClass);
+            target.lastChild.classList.remove(scrollHiddenClass);
         }
 
         
