@@ -324,7 +324,800 @@ var options = {
         ]
                 }
         ]
-        }]
+        },
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+        ,
+        {
+            "clickHandler": defClickHandler,
+            "title": "menu item 2",
+            "disabled": false,
+            "submenu": [
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu level_2 item 1",
+                    "disabled": false,
+                    "submenu": false
+                },
+                {
+                    "clickHandler": defClickHandler,
+                    "title": "menu item 2",
+                    "disabled": false,
+                    "submenu": [
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu level_2 item 1",
+                            "disabled": false,
+                            "submenu": false
+                },
+                        {
+                            "clickHandler": defClickHandler,
+                            "title": "menu item 2",
+                            "disabled": false,
+                            "submenu": false
+                }
+        ]
+                }
+        ]
+        }
+
+    ]
 }
 
 var ctx = new ContextMenu(options);
