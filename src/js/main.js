@@ -3,11 +3,7 @@
 var ContextMenu = function(options_list) {
     this.target = options_list.target;
     
-    
-    
-
     let menu = document.createElement("nav");
-
     menu.classList.add("context-menu");
     
     this.target.append(menu);
@@ -16,23 +12,29 @@ var ContextMenu = function(options_list) {
     
     let oneItemClass = "context-menu__item";
     let submenuClass = "context-menu__sublevel";
+    
+    let containerClass = "context-menu__items";
+    let childClass = "context-menu__item";
+    
+    let childTitleClass = "context-menu__item-title";
+    let hasSublevelClass = "context-menu__items--hasSublevel";
+    let disabledClass = "context-menu__item--disabled";
+    let menuItemHiddenClass = "context-menu__item--hidden";
+    
+    let scrollClass = "context-menu__scroll";
+    let scrollTopClass = "context-menu__scroll-top";
+    let scrollBottomClass = "context-menu__scroll-bottom";
+    let scrollHiddenClass = "context-menu__scroll--hidden";
+    
     (() => {
         let items = renderMenu(options_list.menuItems);
         menu.append(items);
-    })();
-    
-   
+    })();  //init render
     
     function renderMenu(menuItems,level = 0) {
         let current_level = level || 0;
         let container = document.createElement("ul");
-
-        let containerClass = "context-menu__items";
-        let childClass = "context-menu__item";
-        let childTitleClass = "context-menu__item-title";
-        let hasSublevelClass = "context-menu__items--hasSublevel";
-        let disabledClass = "context-menu__item--disabled";
-
+        
         container.classList.add(containerClass);
         if (current_level > 0) container.classList.add("context-menu__sublevel");
         menuItems.forEach((item,i,arr) => {
@@ -50,62 +52,26 @@ var ContextMenu = function(options_list) {
                 item_container.appendChild(submenu);
                 
                 title.addEventListener("mouseover", (e) => {
-               
-                 
                     setPosition(submenu,getPosSubmenu(e),true);
                     e.preventDefault();
-                });
-                title.addEventListener("mouseout", (e) => {
-
-                   
-                    
-                    e.preventDefault();
-                });
-                
-                
+                }); 
             }
             container.appendChild(item_container);
             item_container.addEventListener("click",item.clickHandler);
         });
         return container;
     } 
-    
-
-    document.addEventListener("contextmenu",(e) => {
-        if (e.target == this.target || e.target.parentElement == this.target) {
-            e.preventDefault();
-            let pos = getPosition(e);
-            this.showMenu(pos);
-        }
-        else {
-            this.hideMenu();
-        }
-
-    });
-    
-    document.addEventListener( "click", (e) => {
-        let target = e.target;
-        let button = e.which || e.button;
-        if ( button === 1 && !target.classList.contains("context-menu__scroll")) {
-           this.hideMenu();
-        }
-    });
 
     this.showMenu = (pos) => {
         menu.classList.add(activeClass);
         setPosition(menu, pos);
-        
-        
-
-        
     }
     
     this.hideMenu = () => {
         menu.classList.remove(activeClass);
-
     }
     
-    
+    //for main container
     function getPosition(e) {
       let posx = 0;
       let posy = 0;
@@ -128,6 +94,7 @@ var ContextMenu = function(options_list) {
       }
     }
     
+    //for submenus
     function getPosSubmenu(e) {
         let target = e.target;
         if (!target.classList.contains(oneItemClass)) target = target.parentNode;
@@ -145,18 +112,14 @@ var ContextMenu = function(options_list) {
         let menuItem =  document.querySelector(".context-menu__item");
         let menuItemHeight = parseInt(window.getComputedStyle(menuItem,null).getPropertyValue("height"));
         
-        let parentLeftPos = target.getClientRects()[0].left;
         let parentRightPos = target.getClientRects()[0].right;
         let parentTopPos = target.getClientRects()[0].top;
-        let parentBottomPos = target.getClientRects()[0].bottom;
-        
+
         if ((parentRightPos + posX) > clientWidth) {
             posX = 0 - posX;
-            target.classList.toggle("context-menu__items--leftDirection");
         }
-        if ((parentTopPos + posY + height) > clientHeight) posY = menuItemHeight - height - 5;
         
-
+        if ((parentTopPos + posY + height) > clientHeight) posY = menuItemHeight - height - 5;
         
         return {
             x: posX,
@@ -165,7 +128,6 @@ var ContextMenu = function(options_list) {
     }
     
     function setPosition(target, pos, relative = false) {
-        
         let width = parseInt(window.getComputedStyle(target,null).getPropertyValue("width"));
         let height = parseInt(window.getComputedStyle(target,null).getPropertyValue("height"));
         let clientHeight = document.documentElement.clientHeight - 19;
@@ -175,17 +137,9 @@ var ContextMenu = function(options_list) {
         
         let parent = target.parentNode;
         
-        let parentLeftPos = parent.getClientRects()[0].left;
-        let parentRightPos = parent.getClientRects()[0].right;
         let parentTopPos = parent.getClientRects()[0].top;
-        let parentBottomPos = parent.getClientRects()[0].bottom;
-        
-        //pos это позиция клика в клиентских координатах, width - ширина менюхи
-        //надо назначать 2 класса - направление выпадания сабменюшек
-        //это надо делать исходя из угла
-        if ((pos.x + width) > clientWidth) destX = pos.x - width;
 
-        //if ((pos.y + height) > clientHeight) destY = pos.y - height;
+        if ((pos.x + width) > clientWidth) destX = pos.x - width;
         
         if (relative) {
             pos.y = pos.y + parentTopPos;
@@ -205,7 +159,6 @@ var ContextMenu = function(options_list) {
                     console.log("here");
                 } else {
                     destY = pos.y - height;
-                    //направление вверх
                 }
             } else {
                 destY = pos.y;
@@ -222,25 +175,20 @@ var ContextMenu = function(options_list) {
             destY = destY - parentTopPos;
         }
         
-        
-        
         target.style.left = destX + "px";
         target.style.top = destY + "px";
-
-        
     }
     
-    
     function cutMenu(target, clientHeight) {
-        if (!target.classList.contains("context-menu__items"))  target = target.querySelector(".context-menu__items");
+        if (!target.classList.contains(containerClass))  target = target.querySelector("."+containerClass);
         let scrollTop = document.createElement("span");
         let scrollBottom = document.createElement("span");
-        scrollTop.classList.add("context-menu__scroll-top","context-menu__scroll","context-menu__scroll--hidden");
-        scrollBottom.classList.add("context-menu__scroll-bottom","context-menu__scroll");
+        scrollTop.classList.add(scrollTopClass,scrollClass,scrollHiddenClass);
+        scrollBottom.classList.add(scrollBottomClass,scrollClass);
         target.insertBefore(scrollTop,target.firstChild);
         target.append(scrollBottom);
         target.setAttribute("data-scrollPos",0);
-        let scrollButton = document.querySelector(".context-menu__scroll");
+        let scrollButton = document.querySelector("."+scrollClass);
         let scrollButtonHeight = parseInt(window.getComputedStyle(scrollButton,null).getPropertyValue("height"));
         let aviableHeight = clientHeight - 2*scrollButtonHeight;
         let menuItem =  document.querySelector(".context-menu__item");
@@ -284,33 +232,56 @@ var ContextMenu = function(options_list) {
         if (newScrollPos < 0) newScrollPos = 0;
         if (newScrollPos > (totalItemsCount - visibleItemsCount)) newScrollPos = totalItemsCount - visibleItemsCount;
         
+        
         if (newScrollPos == 0) {
-            target.querySelector(".context-menu__scroll-top").classList.add("context-menu__scroll--hidden");
-        } else {
-             target.querySelector(".context-menu__scroll-top").classList.remove("context-menu__scroll--hidden");
+            target.querySelector("."+scrollTopClass).classList.add(scrollHiddenClass);
+        }
+        else {
+             target.querySelector("."+scrollTopClass).classList.remove(scrollHiddenClass);
         }
         if (newScrollPos == (totalItemsCount - visibleItemsCount)) {
-             target.querySelector(".context-menu__scroll-bottom").classList.add("context-menu__scroll--hidden");
-        } else {
-            target.querySelector(".context-menu__scroll-bottom").classList.remove("context-menu__scroll--hidden");
+             target.querySelector("."+scrollBottomClass).classList.add(scrollHiddenClass);
         }
+        else {
+            target.querySelector("."+scrollBottomClass).classList.remove(scrollHiddenClass);
+        }
+
         
         target.setAttribute("data-scrollPos",newScrollPos);
         
         for (let i=1; i<targetChildren.length-1; i++) {
-            targetChildren[i].classList.add("context-menu__item--hidden");
+            targetChildren[i].classList.add(menuItemHiddenClass);
             if (((i-1) >= newScrollPos) && ((i-1) <= (newScrollPos + visibleItemsCount - 1))) {
-                targetChildren[i].classList.remove("context-menu__item--hidden");
+                targetChildren[i].classList.remove(menuItemHiddenClass);
             }
         }
         
         
     }
+    
+    document.addEventListener("contextmenu",(e) => {
+        if (e.target == this.target || e.target.parentElement == this.target) {
+            e.preventDefault();
+            let pos = getPosition(e);
+            this.showMenu(pos);
+        }
+        else {
+            this.hideMenu();
+        }
+
+    });
+    
+    document.addEventListener("click", (e) => {
+        let target = e.target;
+        let button = e.which || e.button;
+        if ( button === 1 && !target.classList.contains("context-menu__scroll")) {
+           this.hideMenu();
+        }
+    });
 }
 
+var elem = document.body;
 
-
-var elem = document.querySelector("body");
 var options = {
     "target": elem,
     "menuItems": [
@@ -2347,7 +2318,7 @@ var options = {
 var ctx = new ContextMenu(options);
 
 function defClickHandler() {
-
+    console.log("default click handler");
 }
 
 
